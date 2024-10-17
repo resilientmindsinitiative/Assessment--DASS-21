@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DASS-21 Assessment</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(135deg, #a8e6cf, #89cff0);
+            color: #333;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-attachment: fixed;
+            padding: 10px;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 80%;
+            max-width: 600px;
+        }
+        h1 {
+            text-align: center;
+        }
+        p {
+            text-align: center;
+            font-size: 0.9em;
+            color: #555;
+        }
+        .question {
+            margin-bottom: 15px;
+        }
+        .question label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .question select {
+            width: 100%;
+            padding: 5px;
+        }
+        .submit-btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #89cff0;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .submit-btn:hover {
+            background-color: #76b3d2;
+        }
+        .result {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>DASS-21 Assessment</h1>
+        <p>This assessment is not a substitute for a thorough evaluation conducted by professionals. For accurate guidance or support, it's important to book an appointment with a qualified expert who can provide personalized care and advice. If you're seeking help, don't hesitate to reach out to a professional for a more comprehensive assessment and tailored assistance.</p>
+        <form id="dassForm">
+            <!-- DASS-21 questions -->
+            <div class="question">
+                <label for="q1">1. I found it hard to wind down.</label>
+                <select id="q1" name="q1">
+                    <option value="0">Did not apply to me at all</option>
+                    <option value="1">Applied to me to some degree, or some of the time</option>
+                    <option value="2">Applied to me to a considerable degree, or a good part of the time</option>
+                    <option value="3">Applied to me very much, or most of the time</option>
+                </select>
+            </div>
+            <div class="question">
+                <label for="q2">2. I was aware of dryness of my mouth.</label>
+                <select id="q2" name="q2">
+                    <option value="0">Did not apply to me at all</option>
+                    <option value="1">Applied to me to some degree, or some of the time</option>
+                    <option value="2">Applied to me to a considerable degree, or a good part of the time</option>
+                    <option value="3">Applied to me very much, or most of the time</option>
+                </select>
+            </div>
+            <div class="question">
+                <label for="q3">3. I couldn’t seem to experience any positive feeling at all.</label>
+                <select id="q3" name="q3">
+                    <option value="0">Did not apply to me at all</option>
+                    <option value="1">Applied to me to some degree, or some of the time</option>
+                    <option value="2">Applied to me to a considerable degree, or a good part of the time</option>
+                    <option value="3">Applied to me very much, or most of the time</option>
+                </select>
+            </div>
+            <div class="question">
+                <label for="q4">4. I experienced breathing difficulty (e.g., excessively rapid breathing, breathlessness in the absence of physical exertion).</label>
+                <select id="q4" name="q4">
+                    <option value="0">Did not apply to me at all</option>
+                    <option value="1">Applied to me to some degree, or some of the time</option>
+                    <option value="2">Applied to me to a considerable degree, or a good part of the time</option>
+                    <option value="3">Applied to me very much, or most of the time</option>
+                </select>
+            </div>
+            <div class="question">
+                <label for="q5">5. I found it difficult to work up the initiative to do things.</label>
+                <select id="q5" name="q5">
+                    <option value="0">Did not apply to me at all</option>
+                    <option value="1">Applied to me to some degree, or some of the time</option>
+                    <option value="2">Applied to me to a considerable degree, or a good part of the time</option>
+                    <option value="3">Applied to me very much, or most of the time</option>
+                </select>
+            </div>
+            <div class="question">
+                <label for="q6">6. I tended to over-react to situations.</label>
+                <select id="q6" name="q6">
+                    <option value="0">Did not apply to me at all</option>
+                    <option value="1">Applied to me to some degree, or some of the time</option>
+                    <option value="2">Applied to me to a considerable degree, or a good part of the time</option>
+                    <option value="3">Applied to me very much, or most of the time</option>
+                </select>
+            </div>
+            <div class="question">
+                <label for="q7">7. I experienced trembling (e.g., in the hands).</label>
+                <select id="q7" name="q7">
+                    <option value="0">Did not apply to me at all</option>
+                    <option value="1">Applied to me to some degree, or some of the time</option>
+                    <option value="2">Applied to me to a considerable degree, or a good part of the time</option>
+                    <option value="3">Applied to me very much, or most of the time</option>
+                </select>
+            </div>
+            <div class="question">
+                <label for="q8">8. I felt that I was using a lot of nervous energy.</label>
+                <select id="q8" name="q8">
+                    <option value="0">Did not apply to me at all</option>
+                    <option value="1">Applied to me to some degree, or some of the time</option>
+                    <option value="2">Applied to me to a considerable degree, or a good part of the time</option>
+                    <option value="3">Applied to me very much, or most of the time</option>
+                </select>
+            </div>
+            <div class="question">
+                <label for="q9">9. I was worried about situations in which I might panic and make a fool of myself.</label>
+                <select id="q9" name="q9">
+                    <option value="0">Did not apply to me at all</option>
+                    <option value="1">Applied to me to some degree, or some of the time</option>
+                    <option value="2">Applied to me to a considerable degree, or a good part of the time</option>
+                    <option value="3">Applied to me very much, or most of the time</option>
+                </select>
+            </div>
+            <div class="question">
+                <label for="q10">10. I felt that I had nothing to look forward to.</label>
+                <select id="q10" name="q10">
+                    <option value="0">Did not apply to me at all</option>
+                    <option value="1">Applied to me to some degree, or some of the time</option>
+                    <option value="2">Applied to me to a considerable degree, or a good part of the time</option>
+                    <option value="3">Applied to me very much, or most of the time</option>
+                </select>
+            </div>
+            <div class="question">
+                <label for="q11">11. I found myself getting agitated.</label>
+                <select id="q11" name="q11">
+                    <option value="0">Did not apply to me at all</option>
+                    <option value="1">Applied to me to some degree, or some of the time</option>
+                    <option value="2">Applied to me to a considerable degree, or a good part of the time</option>
+                    <option value="3">Applied to me very much, or most of the time</option>
+                </select>
+            </div>
+            <div class="question">
+                <label for="q12">12. I found it difficult to relax.</label>
+                <select id="q12" name="q12">
+                    <option value="0">Did not apply to me at all</option>
+                    <option value="1">Applied to me to some degree, or some of the time</option>
+                    <option value="2">Applied to me to a considerable degree, or a good part of the time</option>
+                    <option value="3">Applied to me very much, or most of the time</option>
+                </select>
+            </div>
+            <div class="question">
+                <label for="q13">13. I felt down-hearted and blue.</label>
+                <select id="q13" name="q13">
+                    <option value="0">Did not apply to me at all</option>
+                    <option value="1">Applied to me to some degree, or some of the time</option>
+                    <option value="2">Applied to me to a considerable degree, or a good part of the time</option>
+                    <option value="3">Applied to me very much, or most of the time</option>
+                </select>
+            </div>
+            <div class="question">
+                <label for="q14">14. I was intolerant of anything that kept me from getting on with what I was doing.</label>
+                <select id="q14" name="q14">
+                    <option value="0">Did not apply to me at all</option>
+                    <option value="1">Applied to me to some degree, or some of the time</option>
+                    <option value="2">Applied to me to a considerable degree, or a good part of the time</option>
+                    <option value="3">Applied to me very much, or most of the time</option>
+                </select>
+            </div>
+            <div class="question">
+                <label for="q15">15. I felt I was close to panic.</label>
+                <select id="q15" name="q15">
+                    <option value="0">Did not apply to me at all</option>
+                    <option value="1">Applied to me to some degree, or some of the time</option>
+                    <option value="2">Applied to me to a considerable degree, or a good part of the time</option>
+                    <option value="3">Applied to me very much, or most of the time</option>
+                </select>
+            </div>
+            <div class="question">
+                <label for="q16">16. I was unable to become enthusiastic about anything.</label>
+                <select id="q16" name="q16">
+                    <option value="0">Did not apply to me at all</option>
+                    <option value="1">Applied to me to some degree, or some of the time</option>
+                    <option value="2">Applied to me to a considerable degree, or a good part of the time</option>
+                    <option value="3">Applied to me very much, or most of the time</option>
+                </select>
+            </div>
+            <div class="question">
+                <label for="q17">17. I felt I wasn’t worth much as a person.</label>
+                <select id="q17" name="q17">
+                    <option value="0">Did not apply to me at all</option>
+                    <option value="1">Applied to me to some degree, or some of the time</option>
+                    <option value="2">Applied to me to a considerable degree, or a good part of the time</option>
+                    <option value="3">Applied to me very much, or most of the time</option>
+                </select>
+            </div>
+            <div class="question">
+                <label for="q18">18. I felt that I was rather touchy.</label>
+                <select id="q18" name="q18">
+                    <option value="0">Did not apply to me at all</option>
+                    <option value="1">Applied to me to some degree, or some of the time</option>
+                    <option value="2">Applied to me to a considerable degree, or a good part of the time</option>
+                    <option value="3">Applied to me very much, or most of the time</option>
+                </select>
+            </div>
+            <div class="question">
+                <label for="q19">19. I was aware of the action of my heart in the absence of physical exertion (e.g., sense of heart rate increase, heart missing a beat).</label>
+                <select id="q19" name="q19">
+                    <option value="0">Did not apply to me at all</option>
+                    <option value="1">Applied to me to some degree, or some of the time</option>
+                    <option value="2">Applied to me to a considerable degree, or a good part of the time</option>
+                    <option value="3">Applied to me very much, or most of the time</option>
+                </select>
+            </div>
+            <div class="question">
+                <label for="q20">20. I felt scared without any good reason.</label>
+                <select id="q20" name="q20">
+                    <option value="0">Did not apply to me at all</option>
+                    <option value="1">Applied to me to some degree, or some of the time</option>
+                    <option value="2">Applied to me to a considerable degree, or a good part of the time</option>
+                    <option value="3">Applied to me very much, or most of the time</option>
+                </select>
+            </div>
+            <div class="question">
+                <label for="q21">21. I felt that life was meaningless.</label>
+                <select id="q21" name="q21">
+                    <option value="0">Did not apply to me at all</option>
+                    <option value="1">Applied to me to some degree, or some of the time</option>
+                    <option value="2">Applied to me to a considerable degree, or a good part of the time</option>
+                    <option value="3">Applied to me very much, or most of the time</option>
+                </select>
+            </div>
+
+            <!-- Submit button -->
+            <button type="button" class="submit-btn" onclick="calculateScore()">Submit</button>
+
+            <!-- Result -->
+            <div class="result" id="result" style="display: none;"></div>
+        </form>
+    </div>
+
+    <script>
+        function calculateScore() {
+            // Initialize variables for storing total scores of each category
+            let depression = 0, anxiety = 0, stress = 0;
+
+            // Depression questions: q3, q5, q10, q13, q16, q17, q21
+            let depressionQuestions = [3, 5, 10, 13, 16, 17, 21];
+            depressionQuestions.forEach(function(q) {
+                depression += parseInt(document.getElementById('q' + q).value);
+            });
+
+            // Anxiety questions: q2, q4, q7, q9, q15, q19, q20
+            let anxietyQuestions = [2, 4, 7, 9, 15, 19, 20];
+            anxietyQuestions.forEach(function(q) {
+                anxiety += parseInt(document.getElementById('q' + q).value);
+            });
+
+            // Stress questions: q1, q6, q8, q11, q12, q14, q18
+            let stressQuestions = [1, 6, 8, 11, 12, 14, 18];
+            stressQuestions.forEach(function(q) {
+                stress += parseInt(document.getElementById('q' + q).value);
+            });
+
+            // Display the results
+            let resultText = `Your DASS-21 scores are: \n\nDepression: ${depression}\nAnxiety: ${anxiety}\nStress: ${stress}`;
+            document.getElementById('result').innerText = resultText;
+            document.getElementById('result').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
